@@ -45,7 +45,7 @@ def callback():
 def handle_message(event):
     message = TextSendMessage(text='Nice to meet you! My name is Jonathan, you can call me Jon.')
     message2 = TextSendMessage(text=(event.source.user_id)) #reply userid
-    line_bot_api.reply_message(event.reply_token, message)
+    line_bot_api.reply_message(event.reply_token, message, message2)
     line_bot_api.reply_message(event.reply_token, message2)
 
 import os

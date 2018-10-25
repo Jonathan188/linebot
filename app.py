@@ -43,17 +43,11 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text='Nice to meet you! My name is Jonathan, you can call me Jon.')
+    message = TextSendMessage(text='Nice to meet you! My name is Jonathan, you can call me Jon, this is my offical account, thank you for participate in this test')
     message2 = TextSendMessage(text=(event.source.user_id)) #reply userid
-    line_bot_api.reply_message(event.reply_token, message)
+    line_bot_api.reply_message(event.reply_token, message2)
     
-    
-# 處理訊息
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    message = TextSendMessage(text='Nice to meet you! My name is Jonathan, you can call me Jon.')
-    message2 = TextSendMessage(text=(event.source.user_id)) #reply userid
-    line_bot_api.reply_message(event.reply_token, message2)    
+
 
 import os
 if __name__ == "__main__":

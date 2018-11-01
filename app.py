@@ -49,11 +49,11 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-     _message = TextSendMessage(text='請不要問我這麼有哲學性的問題~')
-     _message = TextSendMessage(text=(event.source.user_id)) #reply userid
-     line_bot_api.reply_message(event.reply_token, _message)  
-    message = TextSendMessage(text=event)
-	     print(event)
+#     _message = TextSendMessage(text='Nice to meet you!')
+#     _message = TextSendMessage(text=(event.source.user_id)) #reply userid
+#     line_bot_api.reply_message(event.reply_token, _message)  
+    # message = TextSendMessage(text=event)
+#     print(event)
 
     msg = event.message.text
     _low_msg = msg.lower()
